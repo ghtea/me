@@ -98,17 +98,21 @@ const PageWithoutWrapper = () => {
               >
                 <div className="text-lg text-slate-600">{item.title}</div>
                 <div className="mt-4 flex flex-row items-center justify-between">
-                  <IconButton
-                    onClick={() => {
-                      setIsPlayerOpened(true);
-                      actions.go(item.id);
-                    }}
-                  >
-                    <BsFillPlayFill size={30} className="text-slate-500" />
-                  </IconButton>
-                  <IconLink href={item.notion_url || ""}>
-                    <MdModeEdit size={24} className="text-slate-500" />
-                  </IconLink>
+                  {isMe && (
+                    <>
+                      <IconButton
+                        onClick={() => {
+                          setIsPlayerOpened(true);
+                          actions.go(item.id);
+                        }}
+                      >
+                        <BsFillPlayFill size={30} className="text-slate-500" />
+                      </IconButton>
+                      <IconLink href={item.notion_url || ""}>
+                        <MdModeEdit size={24} className="text-slate-500" />
+                      </IconLink>
+                    </>
+                  )}
                   <div className="flex-1"></div>
                   <div className="w-auto text-slate-400">
                     {dayjs().from(dayjs(item.updated_at))}
