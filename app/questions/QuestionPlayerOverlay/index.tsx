@@ -69,17 +69,17 @@ export const QuestionPlayerOverlay = ({
     <div className="fixed z-[10] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-screen h-screen bg-slate-900/50 flex justify-center items-center">
       <div className="flex w-full h-full max-w-[540px] max-h-[800px]">
         <div className="relative flex flex-col w-full h-full bg-white border border-slate-200 p-4 rounded-md overflow-auto">
-          <div className="absolute right-4 top-4">
+          <div className="absolute right-5 top-5">
             <button
-              className="hover:bg-slate-50 rounded-md w-[40px] h-[40px] flex justify-center items-center"
+              className="hover:bg-slate-50 rounded-md w-[48px] h-[48px] flex justify-center items-center"
               onClick={onClose}
             >
-              <AiFillCloseCircle size={30} className="text-slate-400" />
+              <AiFillCloseCircle size={36} className="text-slate-300" />
             </button>
           </div>
           <div
             className={twMerge(
-              "text-xl pl-5 pr-10 pt-3 pb-2 text-slate-700",
+              "text-2xl pl-5 pr-8 pt-3 pb-2 text-slate-700",
               isNil(currentQuestion?.title) && "invisible"
             )}
           >
@@ -103,17 +103,17 @@ export const QuestionPlayerOverlay = ({
                   className={twJoin(
                     syncQuestionMutation.isLoading && "animate-spin"
                   )}
-                  size={20}
+                  size={24}
                 />
               </IconButton>
               <IconLink href={currentQuestion?.notion_url || ""}>
-                <MdModeEdit size={24} />
+                <MdModeEdit size={28} />
               </IconLink>
             </div>
           </div>
           <div className="w-full flex-1 overflow-auto">
             {isAnswerOpened && (
-              <div className="p-4 leading-loose text-lg [&_ul]:list-disc [&_ul]:ml-6 [&_li]:mt-4 text-slate-900">
+              <div className="p-4 leading-[1.6] text-lg [&_ul]:list-disc [&_ul]:ml-6 [&_li]:mt-4 text-slate-900">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{

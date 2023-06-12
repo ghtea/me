@@ -9,7 +9,7 @@ export default function Page() {
         <div className="p-8">
           <Link
             href="/questions"
-            className="flex text-3xl w-[240px] p-4 h-[120px] bg-white border border-slate-200 rounded-lg"
+            className="flex text-3xl w-[300px] p-4 h-[150px] bg-white border border-slate-200 rounded-lg"
           >
             Questions
           </Link>

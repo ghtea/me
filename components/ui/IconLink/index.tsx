@@ -17,7 +17,7 @@ export const IconLink = ({
     <Link
       href={href}
       className={twMerge(
-        "hover:bg-slate-50 text-slate-500 rounded-sm w-[32px] h-[32px] flex justify-center items-center",
+        "hover:bg-slate-50 text-slate-500 rounded-sm w-[36px] h-[36px] flex justify-center items-center",
         className
       )}
     >
