@@ -93,7 +93,7 @@ export const QuestionPlayerOverlay = ({
             >
               {isAnswerOpened ? "Hide Answer" : "Show Answer"}
             </button>
-            <div className="absolute right-12 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2">
+            <div className="absolute left-12 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2">
               <IconButton
                 onClick={() => {
                   syncQuestionMutation.mutate();
@@ -106,6 +106,8 @@ export const QuestionPlayerOverlay = ({
                   size={24}
                 />
               </IconButton>
+            </div>
+            <div className="absolute right-12 top-1/2 -translate-y-1/2 flex flex-row items-center gap-2">
               <IconLink href={currentQuestion?.notion_url || ""}>
                 <MdModeEdit size={28} />
               </IconLink>

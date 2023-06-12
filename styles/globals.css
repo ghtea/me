@@ -15,3 +15,21 @@ html {
 body.is-scroll-disabled {
   overflow: hidden;
 }
+
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: 100vh;
+    height: -webkit-fill-available;
+    height: fill-available;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    min-height: fill-available;
+  }
+  .max-h-screen {
+    max-height: 100vh;
+    max-height: -webkit-fill-available;
+    max-height: fill-available;
+  }
+}
